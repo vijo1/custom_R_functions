@@ -28,19 +28,6 @@ custom.summary(test.set1)
 custom.summary(test.set2)
 
 
-#Write a custom R function that takes any univariate dataset and creates a boxplot of the raw dataset and a histogram of the square root transformed dataset. 
-
-transform.plot<-function(x) {
-par(mfrow=c(1,2))    # set the plotting area into a 1*2 array
-barplot(x, main="Barplot")
-transformed<-sqrt(x)
-hist(transformed, main="Histogram after tranfromation")
-}
-
-transform.plot(test.set1)
-transform.plot(test.set2)
-
-
 #Custom R function: Convert kilograms to pounds
 
 kg_to_lb<-function(x){y <-x*2.205; print(y)}
